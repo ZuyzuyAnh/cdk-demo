@@ -37,7 +37,7 @@ jobs:
         run: pytest src/tests -v
   security-scan:
     runs-on: ubuntu-latest
-    needs: tets
+    needs: tests
     steps:
       - uses: actions/checkout@v3
       - name: Run Bandit security scan
