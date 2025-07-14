@@ -112,7 +112,7 @@ jobs:
           cdk deploy --require-approval never --all --outputs-file cdk-outputs-test.json
 
       - name: Upload Deploy Outputs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cdk-outputs-test
           path: cdk-outputs-test.json
