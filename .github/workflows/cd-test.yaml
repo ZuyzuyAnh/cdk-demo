@@ -91,7 +91,7 @@ jobs:
         run: npm install -g aws-cdk
 
       - name: Download Cloud Assembly
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: cloud-assembly
           path: ${{ env.CDK_OUT }}
