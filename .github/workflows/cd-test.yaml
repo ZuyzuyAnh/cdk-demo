@@ -68,6 +68,9 @@ jobs:
   deploy-test:
     name: 🚀 Deploy to Test Environment
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     needs: cdk-synth
     environment: test
     permissions:
