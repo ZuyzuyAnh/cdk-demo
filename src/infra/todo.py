@@ -43,3 +43,18 @@ class TodoStack(cdk.Stack):
         single.add_method("GET")   # retrieve
         single.add_method("PUT")   # update
         single.add_method("DELETE") # delete
+
+        cdk.CfnOutput(
+            self, "TodoApiUrl",
+            value=api.url,
+            description="URL of the Todo API Gateway",
+            export_name="TodoApiUrl"
+        )
+        
+        # Optional: Also output the table name for debugging
+        cdk.CfnOutput(
+            self, "TodoTableName",
+            value=table.table_name,
+            description="Name of the DynamoDB table",
+            export_name="TodoTableName"
+        )
