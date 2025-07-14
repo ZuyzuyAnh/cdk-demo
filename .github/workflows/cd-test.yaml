@@ -60,7 +60,7 @@ jobs:
           fi
 
       - name: Upload Cloud Assembly
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cloud-assembly
           path: ${{ env.CDK_OUT }}
